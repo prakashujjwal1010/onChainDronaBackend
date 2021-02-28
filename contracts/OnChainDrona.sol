@@ -101,7 +101,7 @@ contract OnChainDrona is SuperAppBase{
     function end() public {
         //requestGithubData();
         require(_participantsSet.contains(msg.sender));
-        _startStream(msg.sender,flowRate);
+        _endStream(msg.sender);
         _participantsSet.remove(msg.sender);
 
     }
